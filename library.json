@@ -1,0 +1,33 @@
+{
+	"name": "devnetXUptime",
+	"version": "1.0.0",
+	"description": "A simple Arduino Uptime Library.",
+	"keywords": "devnetX, Uptime, Arduino",
+	"repository":
+	{
+		"type": "git",
+		"url": "https://github.com/devnetX-Development/devnetXUptime.git"
+	},
+	"authors":
+	[
+		{
+			"name": "Alexej Goujine",
+			"email": "dev@devnetx.at",
+			"url": "https://github.com/devnetX-Development",
+			"maintainer": true
+		}
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/devnetX-Development/devnetXUptime",
+	"dependencies":
+	{
+
+	},
+	"frameworks": "arduino",
+	"platforms": ["atmelavr", "espressif8266", "espressif32", "atmelsam"],
+	"export":
+	{
+		"exclude": [".vscode/*", ".pio/*", "include/*", "tests/*", ".gitignore", "platformio.ini", "src/main.cpp"]
+	},
+	"headers": ["devnetXUptime.h"]
+}
