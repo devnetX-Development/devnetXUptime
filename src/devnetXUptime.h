@@ -7,14 +7,12 @@
 
 #include <Arduino.h>
 
-// TODO: HANDLE MILLIS OVERFLOW
-
 #if !defined(DEVNETXUPTIME_BUFFERSIZE)
 	#define DEVNETXUPTIME_BUFFERSIZE 24U
 #endif
 
 #define UPTIME_MILLIS() (millis())
-// #define UPTIME_MILLIS() (millis() + ((2^32) - 10000)) // For testing purposes only (overflow in 10 seconds)
+// #define UPTIME_MILLIS() (millis() + ((2^32) - 10000)) // For testing purposes only (millis overflow after 10 seconds)
 
 class UptimeClass
 {
@@ -63,11 +61,11 @@ class UptimeClass
 
 	private:
 
-		uint8_t MillisOverflows;
-		uint32_t MillisLast;
-
 		char Buffer[DEVNETXUPTIME_BUFFERSIZE];
 
+		uint8_t MillisOverflows;
+		uint32_t MillisLast;
+		
 		uint16_t UptimeDays;
 		uint8_t  UptimeHours;
 		uint8_t  UptimeMinutes;

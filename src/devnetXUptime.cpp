@@ -1,3 +1,8 @@
+/// \file      devnetXUptime.cpp
+/// \brief     A simple Arduino Uptime Library.
+/// \author    Alexej Goujine (dev@devnetx.at)
+/// \copyright Copyright (c) 2020-2022 devnetX Development
+
 #include <Arduino.h>
 #include <devnetXUptime.h>
 

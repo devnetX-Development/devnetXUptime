@@ -14,6 +14,8 @@ void setup()
 		Serial.print("The uptime is: ");
 		Serial.println(Uptime.ToString());
 	});
+
+	Serial.println("Welcome!");
 }
 
 void loop()
